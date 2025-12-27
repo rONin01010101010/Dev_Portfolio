@@ -1,0 +1,516 @@
+.about-page {
+  min-height: 100vh;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-header {
+  margin-bottom: 60px;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.section-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 40px;
+}
+
+.italic-text {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  margin-bottom: 120px;
+}
+
+.profile-image-large {
+  position: relative;
+  border: 2px solid var(--dark-bg);
+  background-color: white;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+
+.collection-tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--accent-primary);
+  color: var(--dark-bg);
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.profile-image-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.about-description p {
+  margin-bottom: 24px;
+}
+
+.about-description strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.quote {
+  border-left: 4px solid var(--accent-primary);
+  padding-left: 24px;
+  margin: 40px 0;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 32px 0;
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-label {
+  font-size: 0.625rem;
+  color: var(--text-secondary);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text-primary);
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.25rem;
+}
+
+.status-dot-green {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.cta-section {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.education-section {
+  margin-top: 120px;
+  padding-top: 80px;
+  border-top: 2px solid var(--border-dark);
+}
+
+.education-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.section-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.section-heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.yellow-bar {
+  width: 4px;
+  height: 100px;
+  background-color: var(--accent-primary);
+  margin-top: 20px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-top: 20px;
+}
+
+.education-list {
+  display: grid;
+  gap: 40px;
+}
+
+.education-card {
+  background-color: white;
+  border: 2px solid var(--border-dark);
+  padding: 32px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.education-card:hover {
+  transform: translateX(8px);
+  box-shadow: -8px 8px 0 var(--accent-primary);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.card-icon {
+  font-size: 2rem;
+}
+
+.status-badge {
+  font-size: 0.625rem;
+  padding: 4px 8px;
+}
+
+.edu-degree {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.edu-institution {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.edu-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.edu-coursework {
+  margin-bottom: 24px;
+}
+
+.coursework-label {
+  font-size: 0.625rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.coursework-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.edu-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.edu-location {
+  font-size: 1rem;
+}
+
+.github-section {
+  margin-top: 120px;
+  padding: 60px;
+  background-color: white;
+  border: 2px solid var(--border-dark);
+}
+
+.github-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 16px 0;
+}
+
+.github-icon {
+  font-size: 3rem;
+  color: var(--text-primary);
+}
+
+.github-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.github-subtitle {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.github-calendar-wrapper {
+  margin: 40px 0;
+  padding: 32px;
+  background-color: var(--secondary-bg);
+  border: 2px solid var(--border-color);
+  overflow-x: auto;
+}
+
+.github-note {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  padding: 12px 16px;
+  background-color: var(--accent-primary);
+  color: var(--dark-bg);
+  margin-top: 16px;
+}
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .about-header {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .quote {
+    font-size: 1.125rem;
+    padding-left: 20px;
+    margin: 30px 0;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 0;
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
+  }
+
+  .cta-section {
+    flex-direction: column;
+  }
+
+  .cta-section .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .education-section {
+    margin-top: 80px;
+    padding-top: 60px;
+  }
+
+  .education-grid-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .section-header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .section-heading {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  .yellow-bar {
+    width: 100%;
+    height: 4px;
+    margin-top: 20px;
+  }
+
+  .education-card {
+    padding: 24px;
+  }
+
+  .edu-degree {
+    font-size: 1.5rem;
+  }
+
+  .github-section {
+    margin-top: 80px;
+    padding: 32px 20px;
+  }
+
+  .github-title {
+    font-size: 1.75rem;
+  }
+
+  .github-calendar-wrapper {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .about-description {
+    font-size: 0.95rem;
+  }
+
+  .quote {
+    font-size: 1rem;
+    padding-left: 16px;
+  }
+
+  .about-stats {
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .education-section {
+    margin-top: 60px;
+    padding-top: 40px;
+  }
+
+  .education-grid-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .section-header {
+    margin-bottom: 0;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .education-card {
+    padding: 20px;
+  }
+
+  .card-icon {
+    font-size: 1.75rem;
+  }
+
+  .edu-degree {
+    font-size: 1.25rem;
+  }
+
+  .edu-description {
+    font-size: 0.95rem;
+  }
+
+  .coursework-tags {
+    gap: 6px;
+  }
+
+  .github-section {
+    margin-top: 60px;
+    padding: 24px 16px;
+  }
+
+  .github-title {
+    font-size: 1.5rem;
+  }
+
+  .github-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .github-calendar-wrapper {
+    padding: 16px;
+    margin: 24px 0;
+  }
+}

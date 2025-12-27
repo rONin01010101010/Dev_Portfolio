@@ -1,70 +1,197 @@
-# Getting Started with Create React App
+# Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, high-performance portfolio website built with React, featuring a bold design aesthetic inspired by street culture and brutalist UI principles.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Home/Hero Page**: Eye-catching landing page with animated elements and profile card
+- **About Page**: Personal narrative with education timeline and GitHub contribution calendar
+- **Skills Page**: Technical arsenal showcasing frontend, backend, and DevOps proficiencies
+- **Projects Page**: Project gallery with filtering capabilities
+- **Experience Page**: Professional timeline with detailed role descriptions
+- **Contact Page**: Contact form with social links and direct communication options
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React 19
+- React Router DOM
+- React GitHub Calendar
+- Custom CSS with CSS Grid and Flexbox
+- Google Fonts (Inter & Space Mono)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run build`
+2. Start the development server:
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The app will open at [http://localhost:3000](http://localhost:3000)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Build for Production
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run build
+```
 
-### `npm run eject`
+## Customization Guide
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Personal Information
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Update the following files with your information:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**GitHub Username** (for contribution calendar):
+- File: `src/pages/About.js`
+- Line: ~129
+- Change `username="jkena"` to your GitHub username
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Profile Images**:
+Add your images to the `public` folder:
+- `profile.jpg` - Home page profile image (aspect ratio 3:4)
+- `profile-about.jpg` - About page image (aspect ratio 3:4)
+- `project1.jpg` through `project6.jpg` - Project screenshots (aspect ratio 16:10)
 
-## Learn More
+**Contact Information**:
+- File: `src/pages/Contact.js`
+- Update email addresses, social media links, and GitHub profile URLs
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2. Content Updates
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Education** (`src/pages/About.js`):
+- Update the `educationData` array (lines 7-41) with your degrees and certifications
 
-### Code Splitting
+**Experience** (`src/pages/Experience.js`):
+- Update the `experiences` array (lines 6-63) with your work history
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Projects** (`src/pages/Projects.js`):
+- Update the `projects` array (lines 8-71) with your portfolio projects
 
-### Analyzing the Bundle Size
+**Skills** (`src/pages/Skills.js`):
+- Update the `skillsData` object (lines 7-49) with your technical skills
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 3. Color Scheme
 
-### Making a Progressive Web App
+The portfolio uses CSS custom properties for easy theming. Edit `src/index.css` (lines 3-13):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```css
+:root {
+  --primary-bg: #ffffff;
+  --dark-bg: #000000;
+  --accent-primary: #d4ff00;  /* Neon yellow/lime green */
+  --accent-yellow: #ffed00;
+  /* ... more colors */
+}
+```
 
-### Advanced Configuration
+### 4. Resume/CV
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Add your resume PDF to the `public` folder as `resume.pdf`, or update the links in:
+- `src/components/Navigation.js`
+- `src/pages/Experience.js`
+- `src/pages/Contact.js`
 
-### Deployment
+### 5. Form Handling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The contact form in `src/pages/Contact.js` currently logs to console. To make it functional:
 
-### `npm run build` fails to minify
+1. Set up a backend API or use a service like:
+   - [Formspree](https://formspree.io/)
+   - [EmailJS](https://www.emailjs.com/)
+   - [Netlify Forms](https://www.netlify.com/products/forms/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. Update the `handleSubmit` function (line 16) in `src/pages/Contact.js`
+
+### 6. Social Media Links
+
+Update social links throughout the site:
+- Navigation: `src/components/Navigation.js`
+- Contact Page: `src/pages/Contact.js`
+
+## Project Structure
+
+```
+portfolio/
+├── public/
+│   ├── ref/              # UI design references
+│   ├── profile.jpg       # Your profile images (add these)
+│   └── resume.pdf        # Your resume (add this)
+├── src/
+│   ├── components/
+│   │   ├── Navigation.js
+│   │   └── Navigation.css
+│   ├── pages/
+│   │   ├── Home.js/css
+│   │   ├── About.js/css
+│   │   ├── Skills.js/css
+│   │   ├── Projects.js/css
+│   │   ├── Experience.js/css
+│   │   └── Contact.js/css
+│   ├── App.js
+│   ├── App.css
+│   └── index.css         # Global styles and design system
+└── package.json
+```
+
+## Design Philosophy
+
+This portfolio embraces:
+- **Bold Typography**: Large, impactful headings
+- **Grid Backgrounds**: Technical, developer-focused aesthetic
+- **Neon Accents**: High-contrast yellow/lime green highlights
+- **Monospace Details**: Code-inspired UI elements
+- **Brutalist Cards**: Sharp borders and minimal shadows
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Performance Tips
+
+- Optimize images before adding them (use WebP format when possible)
+- Keep the bundle size small by lazy-loading routes if needed
+- Use production build for deployment
+
+## Deployment
+
+Deploy to popular hosting platforms:
+
+**Netlify**:
+```bash
+npm run build
+# Drag and drop the 'build' folder to Netlify
+```
+
+**Vercel**:
+```bash
+npm run build
+vercel --prod
+```
+
+**GitHub Pages**:
+1. Add to `package.json`: `"homepage": "https://yourusername.github.io/portfolio"`
+2. Install: `npm install --save-dev gh-pages`
+3. Add scripts:
+   ```json
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d build"
+   ```
+4. Deploy: `npm run deploy`
+
+## License
+
+MIT License - feel free to use this portfolio template for your own projects!
+
+## Credits
+
+Design inspired by urban aesthetics and modern development culture.
+Built with React and a passion for clean, functional code.
