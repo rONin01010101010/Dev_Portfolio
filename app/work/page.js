@@ -16,7 +16,7 @@ export default function Projects() {
       category: 'AI',
       tags: ['JAVA','GIT'],
       description: 'Implemented mini-max algorithm in gomoku AI application using alpha beta prunning to make decision making faster.',
-      image: '/Gomoku.png',
+      image: '/ref/Gomoku.png',
 
       github: 'https://github.com/rONin01010101010/MINI_MAX',
       year: '2024',
