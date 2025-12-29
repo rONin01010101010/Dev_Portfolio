@@ -48,7 +48,7 @@ export default function About() {
 
               <p>
                 I enjoy learning constantly whether it's new technology or a new hobby. Currently i'm exploring <strong>AI</strong>
-                as it is an interesting field that can contribute to the world. 
+                 as it is an interesting field that can contribute to the world. 
               </p>
 
               <blockquote className="quote">

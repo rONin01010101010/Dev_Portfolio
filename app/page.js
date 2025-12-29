@@ -65,8 +65,7 @@ export default function Home() {
                 <div className="info-item">
                   <div className="info-icon"><FaBriefcase /></div>
                   <div>
-                    <div className="mono info-label">SOFTWARE DEV</div>
-                    <div className="info-value">BACKEND, FULLSTACK</div>
+                    <div className="mono info-label">SOFTWARE ENGINEER</div>
                   </div>
                 </div>
 

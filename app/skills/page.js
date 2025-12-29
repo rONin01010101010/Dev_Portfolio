@@ -97,7 +97,7 @@ export default function Skills() {
     <div className="skills-page grid-bg">
       <div className="marquee-top">
         <div className="marquee-content">
-          {Array(10).fill(['PIXEL_PUSHER', 'URBAN_DEV', 'HIGH_VOLTAGE_CODE', 'STREET_LOGIC']).flat().map((text, i) => (
+          {Array(10).fill(['LEARNER', 'DEVELOPER', 'CODE', 'POLYMATH']).flat().map((text, i) => (
             <span key={i} className="mono">/// {text} ///</span>
           ))}
         </div>

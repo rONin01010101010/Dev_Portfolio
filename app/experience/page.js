@@ -12,7 +12,7 @@ export default function Experience() {
       role: 'Lab Monitor',
       company: 'George Brown Polytechnic School of Technology and Design',
       
-      category: 'BACKEND',
+      category: '',
       description: 'Monitor and worked with computer system experts to setup computers for exams, reported any issues with the computers and ensured proper use',
       achievements: [
         'Assisted in ensuring computer health of different devices in the computer lab',
@@ -53,6 +53,32 @@ export default function Experience() {
           </p>
         </div>
 
+        <div className="filter-tabs">
+          <button
+            className={`filter-tab ${activeFilter === 'ALL' ? 'active' : ''}`}
+            onClick={() => setActiveFilter('ALL')}
+          >
+            <span className="mono">■ ALL</span>
+          </button>
+          <button
+            className={`filter-tab ${activeFilter === 'FULLSTACK' ? 'active' : ''}`}
+            onClick={() => setActiveFilter('FULLSTACK')}
+          >
+            <span className="mono">FULLSTACK</span>
+          </button>
+          <button
+            className={`filter-tab ${activeFilter === 'FRONTEND' ? 'active' : ''}`}
+            onClick={() => setActiveFilter('FRONTEND')}
+          >
+            <span className="mono">FRONTEND</span>
+          </button>
+          <button
+            className={`filter-tab ${activeFilter === 'BACKEND' ? 'active' : ''}`}
+            onClick={() => setActiveFilter('BACKEND')}
+          >
+            <span className="mono">BACKEND</span>
+          </button>
+        </div>
 
         <div className="timeline">
           {filteredExperiences.map((exp, index) => (
@@ -109,8 +135,8 @@ export default function Experience() {
         <div className="experience-footer">
           <div className="footer-card">
             <h3 className="footer-title">VIEW MY RESUME BELOW</h3>
-            <a href="/ref/Dev_Resume.pdf" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              VIEW RESUME ↗
+            <a href="/resume.pdf" className="btn btn-primary" download>
+              DOWNLOAD RESUME ↓
             </a>
           </div>
         </div>
