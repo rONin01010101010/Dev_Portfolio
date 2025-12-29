@@ -1,9 +1,15 @@
 'use client'
 
 import React from 'react';
-import { GitHubCalendar } from 'react-github-calendar';
-import { FaGraduationCap, FaLaptopCode, FaPalette, FaMapMarkerAlt, FaGithub } from 'react-icons/fa';
+import dynamic from 'next/dynamic';
+import { FaGraduationCap, FaMapMarkerAlt, FaGithub } from 'react-icons/fa';
 import './page.css';
+
+// Load GitHubCalendar only on client-side to avoid SSR issues
+const GitHubCalendar = dynamic(
+  () => import('react-github-calendar').then(mod => mod.GitHubCalendar),
+  { ssr: false }
+);
 
 export default function About() {
   const educationData = [
