@@ -83,9 +83,7 @@ export default function About() {
           <div className="education-grid-container">
             <div className="section-header">
               <h2 className="section-heading">
-                EDU<br/>
-                CAT<br/>
-                ION
+                EDUCATION
               </h2>
               <div className="yellow-bar"></div>
               <p className="section-subtitle">
