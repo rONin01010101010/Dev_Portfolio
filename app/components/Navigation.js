@@ -68,7 +68,7 @@ const Navigation = () => {
             CONTACT
           </Link>
           <a
-            href="/ref/Dev_Resume.pdf"
+            href="/ref/Kenan_Dev_Resume.pdf"
             className="nav-link btn-resume"
             target="_blank"
             rel="noopener noreferrer"

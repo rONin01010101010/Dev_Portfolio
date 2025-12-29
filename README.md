@@ -92,7 +92,7 @@ The portfolio uses CSS custom properties for easy theming. Edit `src/index.css` 
 
 ### 4. Resume/CV
 
-Add your resume PDF to the `public` folder as `resume.pdf`, or update the links in:
+Add your resume PDF to the `public/ref` folder as `Kenan_Dev_Resume.pdf`, or update the links in:
 - `src/components/Navigation.js`
 - `src/pages/Experience.js`
 - `src/pages/Contact.js`
@@ -119,9 +119,9 @@ Update social links throughout the site:
 ```
 portfolio/
 ├── public/
-│   ├── ref/              # UI design references
-│   ├── profile.jpg       # Your profile images (add these)
-│   └── resume.pdf        # Your resume (add this)
+│   ├── ref/              # UI design references and resume
+│   │   └── Kenan_Dev_Resume.pdf  # Your resume
+│   └── profile.jpg       # Your profile images (add these)
 ├── src/
 │   ├── components/
 │   │   ├── Navigation.js

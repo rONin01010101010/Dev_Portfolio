@@ -37,7 +37,7 @@ Add these images to the `public/` folder:
 1. **profile.jpg** - Your main photo for the home page (recommended: 600x800px, portrait)
 2. **profile-about.jpg** - Photo for about page (recommended: 600x800px, portrait)
 3. **project1.jpg** through **project6.jpg** - Screenshots of your projects (recommended: 1600x1000px each)
-4. **resume.pdf** - Your resume/CV file
+4. **Kenan_Dev_Resume.pdf** - Your resume/CV file (place in `public/ref/` folder)
 
 **Image Tips:**
 - Use high-quality images (but optimize for web)

@@ -22,6 +22,7 @@ export default function Projects() {
       year: '2024',
 
     },
+  
     {
       id: 2,
       title: 'Radiotherapy Care Resource Center',
@@ -67,6 +68,18 @@ export default function Projects() {
       image: '/ref/Consultation.png',
       link: 'https://selucia-wellness.onrender.com/',
       github: 'https://github.com/rONin01010101010/Consultation/tree/master/selucia-wellness',
+      year: '2025',
+      status: 'LIVE'
+    },
+    {
+      id: 6,
+      title: 'Weather Website',
+      category: 'FULLSTACK',
+      tags: ['EXPRESS JS', "GIT", 'NODE JS ', 'AXIOS','REACT JS', 'RENDER'],
+      description: 'Built a weather application that integrated the open weather api to pull data of weather from over 200+ cities and regions utilizing axios for api fetching and requests. ',
+      image: '/ref/weather.png',
+      link: 'https://one01487858-labtest2.onrender.com/',
+      github: 'https://github.com/rONin01010101010/101487858_Labtest2/tree/master',
       year: '2025',
       status: 'LIVE'
     }

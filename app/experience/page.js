@@ -135,7 +135,7 @@ export default function Experience() {
         <div className="experience-footer">
           <div className="footer-card">
             <h3 className="footer-title">VIEW MY RESUME BELOW</h3>
-            <a href="/resume.pdf" className="btn btn-primary" download>
+            <a href="/ref/Kenan_Dev_Resume.pdf" className="btn btn-primary" download>
               DOWNLOAD RESUME ↓
             </a>
           </div>
