@@ -1,13 +1,11 @@
 .navigation {
   position: fixed;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  background-color: white;
-  border: 2px solid var(--border-dark);
-  border-radius: 12px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
   z-index: 1000;
-  padding: 12px 0;
+  padding: 20px 0;
 }
 
 .nav-container {
@@ -165,7 +163,7 @@
   .nav-mobile-menu {
     display: flex;
     position: fixed;
-    top: 74px;
+    top: 80px;
     left: 10px;
     right: 10px;
     background-color: white;
@@ -239,7 +237,7 @@
   }
 
   .nav-mobile-menu {
-    top: 68px;
+    top: 76px;
   }
 
   .nav-mobile-menu .nav-link {

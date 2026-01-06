@@ -34,9 +34,15 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 400px 1fr;
   gap: 60px;
   margin-bottom: 120px;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .profile-image-large {
@@ -45,6 +51,7 @@
   background-color: white;
   aspect-ratio: 3/4;
   overflow: hidden;
+  width: 100%;
 }
 
 .collection-tag {
@@ -278,6 +285,22 @@
   font-size: 1rem;
 }
 
+.github-calendar-compact {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.github-calendar-wrapper-compact {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  overflow-x: auto;
+}
+
+.github-calendar-wrapper-compact > div {
+  max-width: 100%;
+}
+
 .github-section-inline {
   margin-top: 40px;
   padding: 40px;
@@ -338,6 +361,10 @@
   .about-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .about-left {
+    gap: 20px;
   }
 }
 
@@ -423,6 +450,10 @@
     font-size: 1.5rem;
   }
 
+  .github-calendar-compact {
+    margin-top: 20px;
+  }
+
   .github-section-inline {
     margin-top: 40px;
     padding: 24px 20px;
@@ -506,6 +537,14 @@
 
   .coursework-tags {
     gap: 6px;
+  }
+
+  .github-calendar-compact {
+    margin-top: 15px;
+  }
+
+  .github-calendar-wrapper-compact {
+    font-size: 0.75rem;
   }
 
   .github-section-inline {
