@@ -31,20 +31,13 @@ const Navigation = () => {
           <span className="logo-text mono">PORTFOLIO</span>
         </Link>
 
-        <div className={`nav-links ${mobileMenuOpen ? 'mobile-active' : ''}`}>
+        <div className="nav-center-glass">
           <Link
             href="/work"
             className={`nav-link mono ${isActive('/work') ? 'active' : ''}`}
             onClick={closeMobileMenu}
           >
             WORK
-          </Link>
-          <Link
-            href="/skills"
-            className={`nav-link mono ${isActive('/skills') ? 'active' : ''}`}
-            onClick={closeMobileMenu}
-          >
-            SKILLS
           </Link>
           <Link
             href="/experience"
@@ -59,6 +52,63 @@ const Navigation = () => {
             onClick={closeMobileMenu}
           >
             ABOUT
+          </Link>
+          <Link
+            href="/skills"
+            className={`nav-link mono ${isActive('/skills') ? 'active' : ''}`}
+            onClick={closeMobileMenu}
+          >
+            SKILLS
+          </Link>
+        </div>
+
+        <div className={`nav-right ${mobileMenuOpen ? 'mobile-active' : ''}`}>
+          <Link
+            href="/contact"
+            className={`nav-link btn-contact ${isActive('/contact') ? 'active' : ''}`}
+            onClick={closeMobileMenu}
+          >
+            CONTACT
+          </Link>
+          <a
+            href="/ref/Kenan_Dev_Resume.pdf"
+            className="nav-link btn-resume"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMobileMenu}
+          >
+            RESUME ↗
+          </a>
+        </div>
+
+        <div className={`nav-mobile-menu ${mobileMenuOpen ? 'mobile-active' : ''}`}>
+          <Link
+            href="/work"
+            className={`nav-link mono ${isActive('/work') ? 'active' : ''}`}
+            onClick={closeMobileMenu}
+          >
+            WORK
+          </Link>
+          <Link
+            href="/experience"
+            className={`nav-link mono ${isActive('/experience') ? 'active' : ''}`}
+            onClick={closeMobileMenu}
+          >
+            EXPERIENCE
+          </Link>
+          <Link
+            href="/about"
+            className={`nav-link mono ${isActive('/about') ? 'active' : ''}`}
+            onClick={closeMobileMenu}
+          >
+            ABOUT
+          </Link>
+          <Link
+            href="/skills"
+            className={`nav-link mono ${isActive('/skills') ? 'active' : ''}`}
+            onClick={closeMobileMenu}
+          >
+            SKILLS
           </Link>
           <Link
             href="/contact"

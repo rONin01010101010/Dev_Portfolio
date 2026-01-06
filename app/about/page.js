@@ -56,14 +56,14 @@ export default function About() {
             <div className="about-description">
               <p>
                 I'm an aspiring software engineer currently studying at George Brown Polytechnic with experience in developing applications
-                with user focused designs, although I'm capable in frontend or fullstack development, I learn towards backend development because of my 
-                like towards problem-solving. I have developed applications in <strong>React</strong>, 
+                with user focused designs, although I'm capable in frontend or fullstack development, I learn towards backend development because of my
+                like towards problem-solving. I have developed applications in <strong>React</strong>,
                 <strong> Node.js</strong>,<strong>Springboot</strong> and more with proper ui and system design.
               </p>
 
               <p>
                 I enjoy learning constantly whether it's new technology or a new hobby. Currently i'm exploring <strong>AI</strong>
-                 as it is an interesting field that can contribute to the world. 
+                 as it is an interesting field that can contribute to the world.
               </p>
 
               <blockquote className="quote">
@@ -83,30 +83,30 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div className="github-section">
-          <div className="section-label mono">/// CONTINUALLY EXPANDING KNOWLEDGE</div>
-          <div className="github-icon-wrapper">
-            <FaGithub className="github-icon" />
-          </div>
-          <h3 className="github-title">GitHub Contributions</h3>
-          <p className="github-subtitle">
-            Here are my contributions to projects I have worked on and collaborated on with other developers.
-          </p>
+            <div className="github-section-inline">
+              <div className="section-label mono">/// CONTINUALLY EXPANDING KNOWLEDGE</div>
+              <div className="github-icon-wrapper">
+                <FaGithub className="github-icon" />
+              </div>
+              <h3 className="github-title">GitHub Contributions</h3>
+              <p className="github-subtitle">
+                Here are my contributions to projects I have worked on and collaborated on with other developers.
+              </p>
 
-          <div className="github-calendar-wrapper">
-            <GitHubCalendar
-              username="rONin01010101010"
-              blockSize={12}
-              blockMargin={4}
-              fontSize={14}
-              colorScheme="light"
-              theme={{
-                light: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127'],
-              }}
-            />
+              <div className="github-calendar-wrapper">
+                <GitHubCalendar
+                  username="rONin01010101010"
+                  blockSize={12}
+                  blockMargin={4}
+                  fontSize={14}
+                  colorScheme="light"
+                  theme={{
+                    light: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127'],
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
 

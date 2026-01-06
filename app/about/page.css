@@ -278,6 +278,13 @@
   font-size: 1rem;
 }
 
+.github-section-inline {
+  margin-top: 40px;
+  padding: 40px;
+  background-color: white;
+  border: 2px solid var(--border-dark);
+}
+
 .github-section {
   margin-top: 120px;
   padding: 60px;
@@ -416,6 +423,11 @@
     font-size: 1.5rem;
   }
 
+  .github-section-inline {
+    margin-top: 40px;
+    padding: 24px 20px;
+  }
+
   .github-section {
     margin-top: 80px;
     padding: 32px 20px;
@@ -494,6 +506,11 @@
 
   .coursework-tags {
     gap: 6px;
+  }
+
+  .github-section-inline {
+    margin-top: 30px;
+    padding: 20px 16px;
   }
 
   .github-section {

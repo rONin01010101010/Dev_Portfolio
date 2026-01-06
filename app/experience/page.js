@@ -1,11 +1,9 @@
 'use client'
 
-import React, { useState } from 'react';
+import React from 'react';
 import './page.css';
 
 export default function Experience() {
-  const [activeFilter, setActiveFilter] = useState('ALL');
-
   const experiences = [
     {
       years: '2024 — Present',
@@ -37,11 +35,6 @@ export default function Experience() {
     }
   ];
 
-  // Filter experiences based on active filter
-  const filteredExperiences = activeFilter === 'ALL'
-    ? experiences
-    : experiences.filter(exp => exp.category === activeFilter);
-
   return (
     <div className="experience-page grid-bg">
       <div className="experience-container container">
@@ -53,35 +46,8 @@ export default function Experience() {
           </p>
         </div>
 
-        <div className="filter-tabs">
-          <button
-            className={`filter-tab ${activeFilter === 'ALL' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('ALL')}
-          >
-            <span className="mono">■ ALL</span>
-          </button>
-          <button
-            className={`filter-tab ${activeFilter === 'FULLSTACK' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('FULLSTACK')}
-          >
-            <span className="mono">FULLSTACK</span>
-          </button>
-          <button
-            className={`filter-tab ${activeFilter === 'FRONTEND' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('FRONTEND')}
-          >
-            <span className="mono">FRONTEND</span>
-          </button>
-          <button
-            className={`filter-tab ${activeFilter === 'BACKEND' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('BACKEND')}
-          >
-            <span className="mono">BACKEND</span>
-          </button>
-        </div>
-
         <div className="timeline">
-          {filteredExperiences.map((exp, index) => (
+          {experiences.map((exp, index) => (
             <div key={index} className="timeline-item">
               <div className="timeline-year">
                 <div className="year-display">{exp.period}</div>
