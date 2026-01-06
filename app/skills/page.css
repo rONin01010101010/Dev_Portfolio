@@ -141,8 +141,8 @@
 }
 
 .skill-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  background-color: var(--accent-primary);
+  transform: scale(1.05);
 }
 
 .skill-header {
@@ -270,8 +270,8 @@
 }
 
 .skill-card-tool:hover {
-  border-color: var(--accent-primary);
-  transform: translateY(-4px);
+  background-color: var(--accent-primary);
+  transform: scale(1.05);
 }
 
 .tool-icon {

@@ -98,9 +98,6 @@ export default function Experience() {
                   {exp.status && (
                     <div className="status-badge tag mono">{exp.status}</div>
                   )}
-                  <button className="expand-btn" aria-label="Expand">
-                    ↗
-                  </button>
                 </div>
 
                 <div className="company-info">

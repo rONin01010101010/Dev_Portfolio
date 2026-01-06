@@ -11,6 +11,8 @@ export default function Contact() {
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -21,23 +23,46 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setStatus('');
 
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    const mailtoLink = `mailto:jkenan72@gmail.com?subject=${subject}&body=${body}`;
+    try {
+      // Send email via API
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Open default email client
-    window.location.href = mailtoLink;
+      const data = await response.json();
 
-    // Clear form after submission
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+      if (response.ok) {
+        setStatus('success');
+        // Also open mailto as fallback
+        const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
+        const body = encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        );
+        const mailtoLink = `mailto:jkenan72@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = mailtoLink;
+
+        // Clear form after submission
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -125,12 +150,23 @@ export default function Contact() {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="submit-btn">
-                  TRANSMIT MESSAGE
+                <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                  {isSubmitting ? 'SENDING...' : 'TRANSMIT MESSAGE'}
                   <span className="submit-icon">→</span>
                 </button>
 
-                
+                {status === 'success' && (
+                  <div className="form-message success-message">
+                    Message sent successfully! Opening your email client...
+                  </div>
+                )}
+                {status === 'error' && (
+                  <div className="form-message error-message">
+                    There was an error. Please try again or email directly.
+                  </div>
+                )}
+
+
               </form>
             </div>
           </div>

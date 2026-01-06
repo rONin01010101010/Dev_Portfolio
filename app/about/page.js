@@ -21,6 +21,15 @@ export default function About() {
       coursework: ['Data Structures and Algorithms' , 'System Design and Analysis', 'Machine Learning', "DevOps", 'FullStack Development'],
       location: 'Toronto, ON',
       icon: <FaGraduationCap />
+    },
+    {
+      year: '2025 — Present',
+      degree: 'Computer Science Club Member',
+      institution: 'George Brown Polytechnic',
+      description: 'Active member contributing to the Computer Science Club community',
+      coursework: ['Organized Events', 'Club Meeting Contributions', 'Event Promotion'],
+      location: 'Toronto, ON',
+      icon: <FaGraduationCap />
     }
   ];
 
@@ -74,8 +83,30 @@ export default function About() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            
+        <div className="github-section">
+          <div className="section-label mono">/// CONTINUALLY EXPANDING KNOWLEDGE</div>
+          <div className="github-icon-wrapper">
+            <FaGithub className="github-icon" />
+          </div>
+          <h3 className="github-title">GitHub Contributions</h3>
+          <p className="github-subtitle">
+            Here are my contributions to projects I have worked on and collaborated on with other developers.
+          </p>
+
+          <div className="github-calendar-wrapper">
+            <GitHubCalendar
+              username="rONin01010101010"
+              blockSize={12}
+              blockMargin={4}
+              fontSize={14}
+              colorScheme="light"
+              theme={{
+                light: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127'],
+              }}
+            />
           </div>
         </div>
 
@@ -125,30 +156,6 @@ export default function About() {
             </div>
           </div>
         </div>
-
-        <div className="github-section">
-          <div className="section-label mono">/// CONTINUALLY EXPANDING KNOWLEDGE</div>
-          <div className="github-icon-wrapper">
-            <FaGithub className="github-icon" />
-          </div>
-          <h3 className="github-title">GitHub Contributions</h3>
-          <p className="github-subtitle">
-            Here are my contributions to projects I have worked on and collaborated on with other developers.
-          </p>
-
-          <div className="github-calendar-wrapper">
-            <GitHubCalendar
-              username="rONin01010101010"
-              blockSize={12}
-              blockMargin={4}
-              fontSize={14}
-              colorScheme="light"
-              theme={{
-                light: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127'],
-              }}
-            />
-          </div>
-          </div>
       </div>
     </div>
   );
