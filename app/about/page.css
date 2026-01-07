@@ -44,7 +44,7 @@
   display: grid;
   grid-template-columns: 400px 1fr;
   gap: 60px;
-  margin-bottom: 120px;
+  margin-bottom: 80px;
 }
 
 .about-left {
@@ -293,34 +293,16 @@
   font-size: 1rem;
 }
 
-.github-calendar-compact {
-  width: 100%;
-  overflow-x: auto;
-}
-
-.github-calendar-wrapper-compact {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  overflow-x: auto;
-}
-
-.github-calendar-wrapper-compact > div {
-  max-width: 100%;
-}
-
-.github-section-inline {
-  margin-top: 40px;
-  padding: 40px;
-  background-color: white;
-  border: 2px solid var(--border-dark);
-}
-
 .github-section {
-  margin-top: 120px;
+  margin-top: 80px;
   padding: 60px;
   background-color: white;
   border: 2px solid var(--border-dark);
+}
+
+.github-section .section-label {
+  text-align: center;
+  display: block;
 }
 
 .github-icon-wrapper {
@@ -339,6 +321,7 @@
   font-weight: 800;
   margin-bottom: 16px;
   margin-top: 0;
+  text-align: center;
 }
 
 .github-subtitle {
@@ -346,14 +329,20 @@
   line-height: 1.8;
   color: var(--text-secondary);
   margin-bottom: 40px;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .github-calendar-wrapper {
-  margin: 40px 0;
+  margin: 40px auto 0;
   padding: 32px;
   background-color: var(--secondary-bg);
   border: 2px solid var(--border-color);
   overflow-x: auto;
+  display: inline-block;
+  max-width: 100%;
 }
 
 .github-note {
@@ -396,62 +385,99 @@
     margin-bottom: 40px;
   }
 
+  .section-label {
+    font-size: 0.7rem;
+  }
+
   .section-title {
-    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-size: clamp(2rem, 8vw, 3rem);
+    line-height: 1.1;
+  }
+
+  .italic-text {
+    display: block;
   }
 
   .about-grid {
-    gap: 40px;
+    gap: 35px;
+    margin-bottom: 60px;
   }
 
   .about-left {
     max-width: 100%;
+    gap: 0;
   }
 
   .profile-image-large {
-    max-width: 450px;
-    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
   }
 
-  .github-calendar-compact {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  .collection-tag {
+    font-size: 0.7rem;
+    padding: 6px 12px;
   }
 
-  .github-calendar-wrapper-compact {
-    min-width: 650px;
+  .about-right {
+    gap: 32px;
   }
 
   .about-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .about-description p {
+    margin-bottom: 20px;
+  }
+
+  .quote {
     font-size: 1rem;
+    padding-left: 20px;
+    margin: 28px 0;
   }
 
   .about-stats {
     grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 24px 0;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
   }
 
   .stat-value {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    word-break: break-word;
+  }
+
+  .availability {
+    font-size: 1.1rem;
   }
 
   .education-section {
-    margin-top: 80px;
+    margin-top: 60px;
+    padding-top: 60px;
   }
 
   .education-grid-container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 35px;
   }
 
   .section-header {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 
   .section-heading {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
   }
 
   .yellow-bar {
@@ -463,8 +489,52 @@
     padding: 24px;
   }
 
+  .card-icon {
+    font-size: 1.75rem;
+  }
+
   .edu-degree {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .edu-institution {
+    font-size: 0.85rem;
+  }
+
+  .edu-description {
+    font-size: 0.95rem;
+  }
+
+  .coursework-label {
+    font-size: 0.65rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+
+  .github-section {
+    margin-top: 50px;
+    padding: 40px 20px;
+  }
+
+  .github-icon {
+    font-size: 2.5rem;
+  }
+
+  .github-title {
+    font-size: 1.6rem;
+  }
+
+  .github-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .github-calendar-wrapper {
+    padding: 20px;
+    margin-top: 30px;
+    overflow-x: auto;
   }
 }
 
@@ -508,14 +578,6 @@
     font-size: 0.7rem;
     top: 12px;
     left: 12px;
-  }
-
-  .github-calendar-compact {
-    margin-top: 16px;
-  }
-
-  .github-calendar-wrapper-compact {
-    min-width: 550px;
   }
 
   .about-right {
@@ -611,5 +673,35 @@
 
   .edu-meta {
     font-size: 0.8rem;
+  }
+
+  .github-section {
+    margin-top: 50px;
+    padding: 30px 16px;
+  }
+
+  .section-label {
+    font-size: 0.65rem;
+  }
+
+  .github-icon {
+    font-size: 2rem;
+  }
+
+  .github-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .github-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 30px;
+  }
+
+  .github-calendar-wrapper {
+    padding: 20px 16px;
+    margin-top: 24px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 }

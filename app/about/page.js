@@ -50,21 +50,6 @@ export default function About() {
               <div className="collection-tag mono">COLLECTION 01</div>
               <img src="/ref/Photo_3.jpeg" alt="Profile" />
             </div>
-
-            <div className="github-calendar-compact">
-              <div className="github-calendar-wrapper-compact">
-                <GitHubCalendar
-                  username="rONin01010101010"
-                  blockSize={11}
-                  blockMargin={4}
-                  fontSize={12}
-                  colorScheme="light"
-                  theme={{
-                    light: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127'],
-                  }}
-                />
-              </div>
-            </div>
           </div>
 
           <div className="about-right">
@@ -145,6 +130,30 @@ export default function About() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        <div className="github-section">
+          <div className="section-label mono">/// CONTINUALLY EXPANDING KNOWLEDGE</div>
+          <div className="github-icon-wrapper">
+            <FaGithub className="github-icon" />
+          </div>
+          <h3 className="github-title">GitHub Contributions</h3>
+          <p className="github-subtitle">
+            Here are my contributions to projects I have worked on and collaborated on with other developers.
+          </p>
+
+          <div className="github-calendar-wrapper">
+            <GitHubCalendar
+              username="rONin01010101010"
+              blockSize={11}
+              blockMargin={4}
+              fontSize={12}
+              colorScheme="light"
+              theme={{
+                light: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127'],
+              }}
+            />
           </div>
         </div>
       </div>
