@@ -12,19 +12,6 @@ const GitHubCalendar = dynamic(
 );
 
 export default function About() {
-  const [isMobile, setIsMobile] = React.useState(false);
-
-  React.useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
   const educationData = [
     {
       year: '2024-2026',
@@ -68,9 +55,9 @@ export default function About() {
               <div className="github-calendar-wrapper-compact">
                 <GitHubCalendar
                   username="rONin01010101010"
-                  blockSize={isMobile ? 8 : 11}
-                  blockMargin={isMobile ? 3 : 4}
-                  fontSize={isMobile ? 10 : 12}
+                  blockSize={11}
+                  blockMargin={4}
+                  fontSize={12}
                   colorScheme="light"
                   theme={{
                     light: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127'],
