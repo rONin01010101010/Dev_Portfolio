@@ -264,6 +264,44 @@
 }
 
 @media (max-width: 768px) {
+  .experience-page {
+    padding-top: 100px;
+  }
+
+  .experience-container {
+    padding: 0 20px;
+  }
+
+  .experience-header {
+    padding-left: 0;
+    border-left: none;
+    border-top: 4px solid var(--accent-primary);
+    padding-top: 20px;
+    margin-bottom: 60px;
+  }
+
+  .experience-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .experience-subtitle {
+    font-size: 1rem;
+  }
+
+  .filter-tabs {
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .filter-tab {
+    padding: 10px 16px;
+    font-size: 0.75rem;
+  }
+
+  .timeline {
+    gap: 40px;
+  }
+
   .timeline-item {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -271,6 +309,7 @@
 
   .timeline-year {
     text-align: left;
+    padding-top: 0;
   }
 
   .timeline-connector {
@@ -281,10 +320,126 @@
     font-size: 3rem;
   }
 
+  .year-range {
+    font-size: 0.875rem;
+  }
+
+  .experience-card {
+    padding: 24px;
+  }
+
+  .role-title {
+    font-size: 1.5rem;
+  }
+
+  .company-name {
+    font-size: 0.8rem;
+  }
+
+  .experience-description {
+    font-size: 0.95rem;
+  }
+
+  .achievement-text {
+    font-size: 0.9rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+  }
+
+  .footer-card {
+    padding: 60px 30px;
+  }
+
+  .footer-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-page {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .experience-container {
+    padding: 0 16px;
+  }
+
   .experience-header {
-    padding-left: 0;
-    border-left: none;
-    border-top: 4px solid var(--accent-primary);
-    padding-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .experience-title {
+    font-size: 2rem;
+  }
+
+  .experience-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .timeline {
+    gap: 30px;
+  }
+
+  .year-display {
+    font-size: 2rem;
+  }
+
+  .year-range {
+    font-size: 0.8rem;
+  }
+
+  .experience-card {
+    padding: 20px;
+  }
+
+  .role-title {
+    font-size: 1.25rem;
+  }
+
+  .company-name {
+    font-size: 0.75rem;
+  }
+
+  .company-icon {
+    font-size: 2rem;
+  }
+
+  .experience-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .achievement-item {
+    gap: 8px;
+  }
+
+  .achievement-icon {
+    font-size: 1rem;
+  }
+
+  .achievement-text {
+    font-size: 0.85rem;
+  }
+
+  .tech-tag {
+    font-size: 0.65rem;
+    padding: 4px 10px;
+  }
+
+  .footer-card {
+    padding: 40px 20px;
+  }
+
+  .footer-title {
+    font-size: 1.75rem;
+  }
+
+  .btn {
+    padding: 14px 24px;
+    font-size: 0.875rem;
   }
 }

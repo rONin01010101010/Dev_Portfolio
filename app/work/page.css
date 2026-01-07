@@ -268,6 +268,14 @@
 }
 
 @media (max-width: 768px) {
+  .work-page {
+    padding-top: 100px;
+  }
+
+  .projects-container {
+    padding: 0 20px;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -279,19 +287,26 @@
 
   .projects-hero-title {
     font-size: clamp(2.5rem, 10vw, 4rem);
+    line-height: 1.1;
   }
 
   .projects-hero-desc {
     font-size: 1rem;
+    line-height: 1.6;
   }
 
   .filter-buttons {
     gap: 12px;
+    flex-wrap: wrap;
   }
 
   .filter-btn {
     padding: 10px 16px;
     font-size: 0.75rem;
+  }
+
+  .project-card {
+    border: 2px solid var(--dark-bg);
   }
 
   .project-content {
@@ -304,10 +319,15 @@
 
   .project-description {
     font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .project-tags {
+    gap: 8px;
   }
 
   .cta-section {
-    padding: 80px 0;
+    padding: 80px 20px;
   }
 
   .cta-title {
@@ -316,12 +336,26 @@
 }
 
 @media (max-width: 480px) {
+  .work-page {
+    padding-top: 80px;
+  }
+
+  .projects-container {
+    padding: 0 16px;
+  }
+
   .projects-hero {
     padding: 60px 0 40px;
   }
 
   .projects-hero-title {
     font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .projects-hero-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
   .filter-buttons {
@@ -333,8 +367,25 @@
     font-size: 0.7rem;
   }
 
+  .projects-grid {
+    gap: 20px;
+  }
+
   .project-content {
     padding: 20px;
+  }
+
+  .project-number {
+    font-size: 0.7rem;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
   .project-tags {
@@ -344,5 +395,17 @@
   .tag {
     font-size: 0.65rem;
     padding: 4px 8px;
+  }
+
+  .cta-section {
+    padding: 60px 16px;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .cta-description {
+    font-size: 0.95rem;
   }
 }

@@ -388,6 +388,19 @@
     margin-bottom: 80px;
   }
 
+  .about-left {
+    width: 100%;
+  }
+
+  .profile-image-large {
+    max-width: 100%;
+  }
+
+  .github-calendar-compact {
+    width: 100%;
+    overflow-x: auto;
+  }
+
   .about-description {
     font-size: 1rem;
   }
@@ -483,6 +496,18 @@
     font-size: 2.5rem;
   }
 
+  .about-grid {
+    gap: 30px;
+  }
+
+  .about-left {
+    gap: 20px;
+  }
+
+  .github-calendar-wrapper-compact {
+    overflow-x: scroll;
+  }
+
   .about-description {
     font-size: 0.95rem;
   }
@@ -498,7 +523,7 @@
   }
 
   .stat-value {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .education-section {

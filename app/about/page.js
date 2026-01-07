@@ -55,9 +55,9 @@ export default function About() {
               <div className="github-calendar-wrapper-compact">
                 <GitHubCalendar
                   username="rONin01010101010"
-                  blockSize={8}
-                  blockMargin={3}
-                  fontSize={10}
+                  blockSize={11}
+                  blockMargin={4}
+                  fontSize={12}
                   colorScheme="light"
                   theme={{
                     light: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127'],

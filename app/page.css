@@ -246,6 +246,10 @@
 }
 
 @media (max-width: 768px) {
+  .home-page {
+    padding-top: 100px;
+  }
+
   .home-container {
     padding: 60px 20px 30px;
   }
@@ -253,6 +257,14 @@
   .home-content {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .left-section {
+    order: 1;
+  }
+
+  .right-section {
+    order: 2;
   }
 
   .hero-title {
@@ -268,10 +280,12 @@
   .hero-description {
     font-size: 1rem;
     margin-bottom: 40px;
+    line-height: 1.6;
   }
 
   .cta-buttons {
     flex-wrap: wrap;
+    gap: 12px;
   }
 
   .profile-info {
@@ -284,6 +298,10 @@
 }
 
 @media (max-width: 480px) {
+  .home-page {
+    padding-top: 80px;
+  }
+
   .marquee-content span {
     padding: 0 20px;
     font-size: 0.7rem;
@@ -293,32 +311,44 @@
     padding: 40px 16px 20px;
   }
 
+  .home-content {
+    gap: 30px;
+  }
+
   .tag-status {
     font-size: 0.7rem;
     margin-bottom: 30px;
+    padding: 5px 10px;
   }
 
   .hero-title {
     font-size: 2.5rem;
     margin-bottom: 24px;
+    line-height: 1;
   }
 
   .yellow-bar {
     height: 50px;
+    width: 3px;
   }
 
   .hero-description {
     font-size: 0.95rem;
     margin-bottom: 30px;
+    line-height: 1.5;
   }
 
   .cta-buttons {
-    gap: 16px;
+    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .btn {
     font-size: 0.75rem;
     padding: 12px 24px;
+    width: 100%;
+    text-align: center;
   }
 
   .play-btn {
