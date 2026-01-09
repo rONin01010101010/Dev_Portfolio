@@ -110,6 +110,16 @@ const Navigation = () => {
         </div>
 
         <div className={`nav-mobile-menu ${mobileMenuOpen ? 'mobile-active' : ''}`}>
+          <button
+            className={`mobile-menu-btn ${mobileMenuOpen ? 'active' : ''}`}
+            onClick={toggleMobileMenu}
+            aria-label="Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
           <Link
             href="/work"
             className={`nav-link mono ${isActive('/work') ? 'active' : ''}`}
@@ -155,16 +165,6 @@ const Navigation = () => {
             RESUME ↗
           </a>
         </div>
-
-        <button
-          className={`mobile-menu-btn ${mobileMenuOpen ? 'active' : ''}`}
-          onClick={toggleMobileMenu}
-          aria-label="Menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
     </nav>
   );
