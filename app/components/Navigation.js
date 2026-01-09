@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import './Navigation.css';
@@ -8,6 +8,8 @@ import './Navigation.css';
 const Navigation = () => {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [navHidden, setNavHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const isActive = (path) => {
     return pathname === path;
@@ -21,8 +23,34 @@ const Navigation = () => {
     setMobileMenuOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and past 100px
+        setNavHidden(true);
+        setMobileMenuOpen(false); // Close menu when hiding navbar
+      } else {
+        // Scrolling up
+        setNavHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    // Only add listener on mobile devices
+    if (window.innerWidth <= 1024) {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, [lastScrollY]);
+
   return (
-    <nav className="navigation">
+    <nav className={`navigation ${navHidden ? 'nav-hidden' : ''}`}>
       <div className="nav-container">
         <Link href="/" className="logo">
           <div className="logo-icon">

@@ -134,14 +134,28 @@
   display: none;
   flex-direction: column;
   gap: 4px;
-  background: none;
-  border: none;
+  background: white;
+  border: 2px solid var(--dark-bg);
+  border-radius: 50%;
   cursor: pointer;
-  padding: 8px;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  background-color: var(--dark-bg);
+}
+
+.mobile-menu-btn:hover span {
+  background-color: white;
 }
 
 .mobile-menu-btn span {
-  width: 24px;
+  width: 20px;
   height: 2px;
   background-color: var(--dark-bg);
   transition: all 0.3s ease;
@@ -153,12 +167,21 @@
 
 @media (max-width: 1024px) {
   .navigation {
-    position: sticky;
+    position: fixed;
     top: 0;
     background-color: white;
     border-bottom: 2px solid var(--border-dark);
     padding: 16px 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .navigation.nav-hidden {
+    transform: translateY(-100%);
+  }
+
+  .logo-text {
+    display: none;
   }
 
   .nav-center-glass {
@@ -172,27 +195,30 @@
   .nav-mobile-menu {
     display: flex;
     position: fixed;
-    top: 72px;
+    top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     background-color: white;
-    border-bottom: 2px solid var(--border-dark);
     border-radius: 0;
     flex-direction: column;
     gap: 0;
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+    padding: 80px 0 0 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
   }
 
   .nav-mobile-menu.mobile-active {
-    max-height: 600px;
+    opacity: 1;
+    visibility: visible;
   }
 
   .mobile-menu-btn {
     display: flex;
+    z-index: 1001;
   }
 }
 
@@ -203,24 +229,38 @@
 
   .nav-mobile-menu .nav-link {
     width: 100%;
-    padding: 20px 40px;
+    padding: 24px 40px;
     border-bottom: 1px solid var(--border-color);
-    text-align: left;
+    text-align: center;
     border-radius: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
   }
 
   .nav-mobile-menu .nav-link.active {
-    background-color: transparent;
-    color: var(--text-primary);
+    background-color: var(--accent-primary);
+    color: var(--dark-bg);
     font-weight: 700;
   }
 
   .nav-mobile-menu .btn-contact,
   .nav-mobile-menu .btn-resume {
+    width: calc(100% - 80px);
+    margin: 20px 40px;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  .nav-mobile-menu .btn-contact {
+    background-color: var(--accent-primary);
+    color: var(--dark-bg);
+    border: 2px solid var(--dark-bg);
+  }
+
+  .nav-mobile-menu .btn-resume {
     background-color: transparent;
     color: var(--dark-bg);
-    border: none;
-    border-bottom: 1px solid var(--border-color);
+    border: 2px solid var(--dark-bg);
   }
 
   .mobile-menu-btn.active span:nth-child(1) {
