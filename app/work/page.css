@@ -71,6 +71,333 @@
   color: var(--dark-bg);
 }
 
+.filter-btn-capstone {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.filter-btn-capstone:hover,
+.filter-btn-capstone.active {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--dark-bg);
+}
+
+/* ─── CAPSTONE VIEW ────────────────────────────────────────── */
+
+.capstone-wrapper {
+  background-color: var(--primary-bg);
+  padding: 80px 0;
+}
+
+.capstone-top-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+  align-items: start;
+}
+
+.capstone-bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+.capstone-card {
+  background-color: white;
+  border: 2px solid var(--dark-bg);
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Identity card */
+.capstone-identity {
+  display: flex;
+  flex-direction: column;
+}
+
+.capstone-identity-label,
+.capstone-docs-label,
+.capstone-card-label {
+  font-size: 0.65rem;
+  color: var(--accent-primary);
+  background-color: var(--dark-bg);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.08em;
+}
+
+.capstone-image-wrap {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background-color: var(--secondary-bg);
+}
+
+.capstone-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(30%);
+  transition: filter 0.4s ease;
+}
+
+.capstone-card:hover .capstone-image-wrap img {
+  filter: grayscale(0);
+}
+
+.capstone-identity-info {
+  padding: 24px;
+}
+
+.capstone-title {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+
+.capstone-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Docs card */
+.capstone-docs {
+  display: flex;
+  flex-direction: column;
+  max-height: 680px;
+  overflow-y: auto;
+}
+
+.capstone-doc-section {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.capstone-doc-section:last-child {
+  border-bottom: none;
+}
+
+.capstone-doc-heading {
+  font-size: 0.65rem;
+  color: var(--accent-primary);
+  background-color: var(--dark-bg);
+  display: inline-block;
+  padding: 4px 10px;
+  margin-bottom: 12px;
+  letter-spacing: 0.06em;
+}
+
+.capstone-doc-text {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+/* Figma card */
+.capstone-figma {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capstone-figma:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.capstone-figma-preview {
+  position: relative;
+  flex: 1;
+  min-height: 220px;
+  background-color: #1e1e2e;
+  overflow: hidden;
+}
+
+.capstone-figma-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  border: none;
+  pointer-events: none;
+}
+
+.capstone-figma-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.capstone-figma:hover .capstone-figma-overlay {
+  opacity: 1;
+}
+
+.capstone-figma-overlay span {
+  color: var(--accent-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.capstone-ext-icon {
+  margin-left: auto;
+  font-size: 0.6rem;
+  opacity: 0.7;
+}
+
+.capstone-label-icon {
+  font-size: 0.85rem;
+}
+
+/* Status reports card */
+.capstone-status {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.capstone-reports-list {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 420px;
+}
+
+.capstone-report-item {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.capstone-report-item:last-child {
+  border-bottom: none;
+}
+
+.capstone-report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.capstone-report-week {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+}
+
+.capstone-report-badge {
+  font-size: 0.55rem;
+  padding: 3px 8px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.badge-complete {
+  background-color: var(--accent-primary);
+  color: var(--dark-bg);
+}
+
+.badge-progress {
+  background-color: var(--dark-bg);
+  color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+}
+
+.badge-upcoming {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--text-secondary);
+}
+
+.capstone-report-title {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.capstone-report-date {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+}
+
+/* System implementation card */
+.capstone-implementation {
+  display: flex;
+  flex-direction: column;
+}
+
+.capstone-implementation .capstone-doc-text {
+  padding: 20px 24px;
+  flex: 1;
+}
+
+.capstone-impl-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 24px 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Scrollbar styling for cards */
+.capstone-docs::-webkit-scrollbar,
+.capstone-reports-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.capstone-docs::-webkit-scrollbar-track,
+.capstone-reports-list::-webkit-scrollbar-track {
+  background: var(--secondary-bg);
+}
+
+.capstone-docs::-webkit-scrollbar-thumb,
+.capstone-reports-list::-webkit-scrollbar-thumb {
+  background: var(--dark-bg);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .capstone-bottom-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .capstone-implementation {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .capstone-top-row {
+    grid-template-columns: 1fr;
+  }
+
+  .capstone-bottom-row {
+    grid-template-columns: 1fr;
+  }
+
+  .capstone-implementation {
+    grid-column: auto;
+  }
+
+  .capstone-docs {
+    max-height: none;
+  }
+
+  .capstone-reports-list {
+    max-height: none;
+  }
+}
+
 .projects-grid-wrapper {
   background-color: var(--primary-bg);
   padding: 80px 0;
