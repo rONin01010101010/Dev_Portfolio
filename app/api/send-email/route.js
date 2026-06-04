@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 export async function POST(request) {
   try {
     const { name, email, message } = await request.json();
 
-    // Validate input
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: 'All fields are required' },
@@ -12,57 +12,35 @@ export async function POST(request) {
       );
     }
 
-    // For now, we'll use a mailto fallback approach
-    // To implement actual email sending, you would need to:
-    // 1. Install nodemailer: npm install nodemailer
-    // 2. Set up email credentials in .env.local
-    // 3. Configure nodemailer transport
-
-    // Example with nodemailer (commented out - requires installation):
-    /*
-    const nodemailer = require('nodemailer');
-
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD
-      }
+        pass: process.env.EMAIL_PASSWORD,
+      },
     });
 
-    const mailOptions = {
-      from: email,
-      to: 'jkenan72@gmail.com',
+    await transporter.sendMail({
+      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER,
+      replyTo: email,
       subject: `Portfolio Contact from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       html: `
-        <h3>New Contact Form Submission</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      `
-    };
+        <div style="font-family: monospace; max-width: 600px; margin: 0 auto; padding: 24px; background: #0a0a0a; color: #e0e0e0; border: 1px solid #333;">
+          <h2 style="color: #FFD700; margin-bottom: 24px;">// NEW CONTACT MESSAGE</h2>
+          <p><strong style="color: #FFD700;">NAME:</strong> ${name}</p>
+          <p><strong style="color: #FFD700;">EMAIL:</strong> <a href="mailto:${email}" style="color: #FFD700;">${email}</a></p>
+          <hr style="border-color: #333; margin: 16px 0;" />
+          <p><strong style="color: #FFD700;">MESSAGE:</strong></p>
+          <p style="white-space: pre-wrap; line-height: 1.6;">${message}</p>
+        </div>
+      `,
+    });
 
-    await transporter.sendMail(mailOptions);
-    */
-
-    // For a production-ready solution, consider using services like:
-    // - Resend (npm install resend)
-    // - SendGrid
-    // - AWS SES
-    // - Mailgun
-
-    return NextResponse.json(
-      {
-        success: true,
-        message: 'Email functionality ready. Please install nodemailer or use an email service.'
-      },
-      { status: 200 }
-    );
-
+    return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Email send error:', error);
     return NextResponse.json(
       { error: 'Failed to send email' },
       { status: 500 }

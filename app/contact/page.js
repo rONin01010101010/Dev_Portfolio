@@ -40,20 +40,7 @@ export default function Contact() {
 
       if (response.ok) {
         setStatus('success');
-        // Also open mailto as fallback
-        const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
-        const body = encodeURIComponent(
-          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-        );
-        const mailtoLink = `mailto:jkenan72@gmail.com?subject=${subject}&body=${body}`;
-        window.location.href = mailtoLink;
-
-        // Clear form after submission
-        setFormData({
-          name: '',
-          email: '',
-          message: ''
-        });
+        setFormData({ name: '', email: '', message: '' });
       } else {
         setStatus('error');
       }
@@ -157,7 +144,7 @@ export default function Contact() {
 
                 {status === 'success' && (
                   <div className="form-message success-message">
-                    Message sent successfully! Opening your email client...
+                    Message sent! I'll get back to you soon.
                   </div>
                 )}
                 {status === 'error' && (
